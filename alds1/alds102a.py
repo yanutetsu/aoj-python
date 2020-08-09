@@ -6,9 +6,7 @@ i = 0
 while i < n:
     for j in range(n - 1, i, -1):
         if a[j] < a[j - 1]:
-            buf = a[j]
-            a[j] = a[j - 1]
-            a[j - 1] = buf
+            a[j], a[j - 1] = a[j - 1], a[j]
             c += 1
     i += 1
 
